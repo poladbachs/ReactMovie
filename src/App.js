@@ -24,6 +24,12 @@ export default function App() {
         searchMovies('Batman');
     }, [])
 
+    const handleKeyDown = (e) => {
+        if (e.key === 'Enter') {
+            searchMovies(searchTerm);
+        }
+    }
+
     return (
         <div className='app'>
             <h1>React Movie</h1>
@@ -33,6 +39,7 @@ export default function App() {
                     placeholder="Search for movies"
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
+                    onKeyDown={handleKeyDown}
                 />
                 <img
                     src={SearchIcon}
