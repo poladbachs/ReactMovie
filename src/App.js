@@ -34,7 +34,8 @@ export default function App() {
     }
 
     useEffect(() => {
-        searchMovies('Batman');
+        const randomKeyword = getRandomKeyword();
+        searchMovies(randomKeyword);
     }, [])
 
     const handleKeyDown = (e) => {
