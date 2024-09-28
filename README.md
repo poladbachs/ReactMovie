@@ -4,6 +4,12 @@
 
 **React Movie** is a movie search web application built using **React.js**. Users can search for movies, view relevant results, and click on a movie to be redirected to its IMDb page. The project showcases practical use of **React Hooks**, **Modern CSS**, and integrates external API services for real-time movie data fetching. The user interface is designed to be intuitive and responsive for a seamless experience across devices.
 
+## Demo
+
+A demo video is included to showcase the core features of the **React Movie** app. The demo highlights the search functionality, random movie list display on load, and redirection to IMDb upon clicking a movie card.
+
+![ReactMovie](https://github.com/user-attachments/assets/33f52e28-e98d-4024-8586-96ccda15ed76)
+
 ## Features
 
 - **Movie Search**: Users can search for any movie by entering a title and view relevant results.
@@ -61,9 +67,3 @@ In the **React Movie** project, I focused on implementing the following:
   
 - **Error Handling**:
   - Displayed an error message ("No movies found") when the search did not return any results, improving the user experience.
-
-## Demo
-
-A demo video is included to showcase the core features of the **React Movie** app. The demo highlights the search functionality, random movie list display on load, and redirection to IMDb upon clicking a movie card.
-
-![ReactMovie](https://github.com/user-attachments/assets/33f52e28-e98d-4024-8586-96ccda15ed76)
