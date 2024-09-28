@@ -7,14 +7,6 @@ import SearchIcon from './assets/search.svg'
 
 const API_URL = 'http://www.omdbapi.com?apikey=631507fc';
 
-const movie1 = {
-    "Title": "Batman Begins",
-    "Year": "2005",
-    "imdbID": "tt0372784",
-    "Type": "movie",
-    "Poster": "https://m.media-amazon.com/images/M/MV5BOTY4YjI2N2MtYmFlMC00ZjcyLTg3YjEtMDQyM2ZjYzQ5YWFkXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg"
-}
-
 export default function App() {
 
     const [movies, setMovies] = useState([]);
