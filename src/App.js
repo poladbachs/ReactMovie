@@ -52,7 +52,7 @@ export default function App() {
                     ? (
                         <div className="container">
                             {movies.map((movie) => (
-                                <MovieCard movie1={movie}/>
+                                <MovieCard movie={movie}/>
                             ))}
                         </div>
                     ) : (
