@@ -2,20 +2,17 @@ import { useState, useEffect } from 'react';
 import MovieCard from './MovieCard';
 
 import './App.css';
-
-import SearchIcon from './assets/search.svg'
+import SearchIcon from './assets/search.svg';
 
 const API_URL = 'http://www.omdbapi.com?apikey=631507fc';
 
 export default function App() {
-
     const [movies, setMovies] = useState([]);
-
     const [searchTerm, setSearchTerm] = useState('');
 
     const movieKeywords = [
-        'Batman', 'Superman', 'Avengers', 'X-Men', 'Harry Potter', 
-        'Star Wars', 'Spider-Man', 'Iron Man', 'Matrix', 
+        'Batman', 'Superman', 'Avengers', 'X-Men', 'Harry Potter',
+        'Star Wars', 'Spider-Man', 'Iron Man', 'Matrix',
         'Lord of the Rings', 'Jurassic Park', 'Pirates of the Caribbean', 'The Hobbit',
         'Shrek', 'Toy Story', 'Indiana Jones', 'Transformers', 'Fast and Furious',
         'James Bond', 'The Godfather', 'John Wick', 'Supernatural', 'Boys'
@@ -33,20 +30,33 @@ export default function App() {
         setMovies(data.Search || []);
         setSearchTerm('');
 
-        localStorage.setItem('lastSearchedTerm', title);
-    }
+        localStorage.setItem('lastSearchTerm', title);
+        sessionStorage.setItem('hasLoadedOnce', 'true');
+    };
 
     useEffect(() => {
-        const randomKeyword = getRandomKeyword();
-        searchMovies(randomKeyword);
-    }, [])
+        const lastSearchTerm = localStorage.getItem('lastSearchTerm');
+        const hasLoadedOnce = sessionStorage.getItem('hasLoadedOnce');
+
+        if (hasLoadedOnce) {
+            if (lastSearchTerm) {
+                searchMovies(lastSearchTerm);
+            } else {
+                const randomKeyword = getRandomKeyword();
+                searchMovies(randomKeyword);
+            }
+        } else {
+            const randomKeyword = getRandomKeyword();
+            searchMovies(randomKeyword);
+        }
+    }, []);
 
     const handleKeyDown = (e) => {
         if (e.key === 'Enter') {
             searchMovies(searchTerm);
             setSearchTerm('');
         }
-    }
+    };
 
     return (
         <div className='app'>
@@ -65,12 +75,12 @@ export default function App() {
                     onClick={() => searchMovies(searchTerm)}
                 />
             </div>
-            
-            {movies?.length > 0 
+
+            {movies?.length > 0
                 ? (
                     <div className="container">
                         {movies.map((movie) => (
-                            <MovieCard key={movie.imdbID} movie={movie}/>
+                            <MovieCard key={movie.imdbID} movie={movie} />
                         ))}
                     </div>
                 ) : (
