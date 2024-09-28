@@ -37,7 +37,7 @@ export default function App() {
                 <img
                     src={SearchIcon}
                     alt="search"
-                    onClick={() => { }}
+                    onClick={() => searchMovies(searchTerm)}
                 />
             </div>
             
