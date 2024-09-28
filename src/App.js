@@ -16,6 +16,9 @@ export default function App() {
     const movieKeywords = [
         'Batman', 'Superman', 'Avengers', 'X-Men', 'Harry Potter', 
         'Star Wars', 'Spider-Man', 'Iron Man', 'Matrix', 
+        'Lord of the Rings', 'Jurassic Park', 'Pirates of the Caribbean', 'The Hobbit',
+        'Shrek', 'Toy Story', 'Indiana Jones', 'Transformers', 'Fast and Furious',
+        'James Bond', 'The Godfather', 'John Wick', 'Supernatural', 'Boys'
     ];
 
     const searchMovies = async (title) => {
