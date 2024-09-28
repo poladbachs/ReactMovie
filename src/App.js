@@ -21,6 +21,11 @@ export default function App() {
         'James Bond', 'The Godfather', 'John Wick', 'Supernatural', 'Boys'
     ];
 
+    const getRandomKeyword = () => {
+        const randomIndex = Math.floor(Math.random() * movieKeywords.length);
+        return movieKeywords[randomIndex];
+    };
+
     const searchMovies = async (title) => {
         const res = await fetch(`${API_URL}&s=${title}`);
         const data = await res.json();
