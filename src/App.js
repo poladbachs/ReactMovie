@@ -31,6 +31,7 @@ export default function App() {
         const data = await res.json();
 
         setMovies(data.Search);
+        setSearchTerm('');
     }
 
     useEffect(() => {
@@ -41,6 +42,7 @@ export default function App() {
     const handleKeyDown = (e) => {
         if (e.key === 'Enter') {
             searchMovies(searchTerm);
+            setSearchTerm('');
         }
     }
 
