@@ -30,8 +30,10 @@ export default function App() {
         const res = await fetch(`${API_URL}&s=${title}`);
         const data = await res.json();
 
-        setMovies(data.Search);
+        setMovies(data.Search || []);
         setSearchTerm('');
+
+        localStorage.setItem('lastSearchedTerm', title);
     }
 
     useEffect(() => {
