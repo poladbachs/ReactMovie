@@ -51,7 +51,9 @@ export default function App() {
                 movies?.length > 0 
                     ? (
                         <div className="container">
-                            <MovieCard movie1={movie1} />
+                            {movies.map((movie) => (
+                                <MovieCard movie1={movie}/>
+                            ))}
                         </div>
                     ) : (
                         <div className='empty'>
