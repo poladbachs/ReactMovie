@@ -11,6 +11,8 @@ export default function App() {
 
     const [movies, setMovies] = useState([]);
 
+    const [searchTerm, setSearchTerm] = useState('');
+
     const searchMovies = async (title) => {
         const res = await fetch(`${API_URL}&s=${title}`);
         const data = await res.json();
@@ -29,8 +31,8 @@ export default function App() {
             <div className='search'>
                 <input
                     placeholder="Search for movies"
-                    value="Batman"
-                    onChange={() => { }}
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
                 />
                 <img
                     src={SearchIcon}
