@@ -22,6 +22,14 @@ export default function App() {
     return (
         <div className='app'>
             <h1>React Movie</h1>
+
+            <div className='search'>
+                <input
+                    placeholder="Search for movies"
+                    value="Batman"
+                    onChange={() => {}}
+                />
+            </div>
         </div>
     );
 }
