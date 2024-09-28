@@ -65,3 +65,5 @@ In the **React Movie** project, I focused on implementing the following:
 ## Demo
 
 A demo video is included to showcase the core features of the **React Movie** app. The demo highlights the search functionality, random movie list display on load, and redirection to IMDb upon clicking a movie card.
+
+![ReactMovie](https://github.com/user-attachments/assets/33f52e28-e98d-4024-8586-96ccda15ed76)
