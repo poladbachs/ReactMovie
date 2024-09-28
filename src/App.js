@@ -1,5 +1,4 @@
-import { useEffect } from 'react';
-
+import { useState, useEffect } from 'react';
 import MovieCard from './MovieCard';
 
 import './App.css';
@@ -17,6 +16,8 @@ const movie1 = {
 }
 
 export default function App() {
+
+    const [movies, setMovies] = useState([]);
 
     const searchMovies = async (title) => {
         const res = await fetch(`${API_URL}&s=${title}`);
