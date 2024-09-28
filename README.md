@@ -1,70 +1,55 @@
-# Getting Started with Create React App
+# React Movie
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Project Overview
 
-## Available Scripts
+**React Movie** is a movie search web application built using **React.js**. Users can search for movies, view relevant results, and click on a movie to be redirected to its IMDb page. The project showcases practical use of **React Hooks**, **Modern CSS**, and integrates external API services for real-time movie data fetching. The user interface is designed to be intuitive and responsive for a seamless experience across devices.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- **Movie Search**: Users can search for any movie by entering a title and view relevant results.
+- **Random Keyword Search**: The app automatically searches for a random movie from a predefined list of keywords when the page loads.
+- **Movie Redirection**: Users can click on a movie card to be redirected to its IMDb page.
+- **Responsive Design**: A modern and clean interface that adapts to various screen sizes.
+- **Error Handling**: Displays a message if no movies are found based on the search input.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Technologies Used
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **React.js**
+- **OMDb API** for fetching movie data
+- **CSS**
 
-### `npm test`
+## What I Did in This Project
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+In the **React Movie** project, I focused on implementing the following:
 
-### `npm run build`
+- **React Functional Components**:
+  - Created functional components like `App` and `MovieCard` to structure the app efficiently.
+  - Used React’s **Hooks** (`useState`, `useEffect`) for state and lifecycle management.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **State Management and Hooks**:
+  - Utilized `useState` to manage the search input and movie data.
+  - Leveraged `useEffect` to trigger the random movie search when the page first loads.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **API Integration with OMDb**:
+  - Integrated the OMDb API for movie search functionality based on the user's input.
+  - Implemented an **asynchronous function** using `async/await` to fetch movie data and handle the JSON response.
+  - Ensured safe handling of API responses, including checking for null results and handling errors.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **Search and Display Logic**:
+  - Developed the ability for users to search for movies by entering a title and pressing "Enter" or clicking a search icon.
+  - Implemented a random keyword generator that automatically searches for a movie upon initial load using predefined movie titles (e.g., "Batman", "Harry Potter").
 
-### `npm run eject`
+- **Dynamic Movie Cards**:
+  - Created a reusable `MovieCard` component that displays each movie's poster, title, and year.
+  - Added click functionality that dynamically redirects users to the movie’s IMDb page based on its unique IMDb ID.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- **User Experience (UX) and Interface (UI)**:
+  - Designed a **responsive and modern UI** using **CSS** to ensure a polished appearance across all devices.
+  - Styled the search bar, movie cards, and implemented hover effects to improve interaction and engagement.
+  
+- **Error Handling**:
+  - Displayed an error message ("No movies found") when the search did not return any results, improving the user experience.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Demo
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+A demo video is included to showcase the core features of the **React Movie** app. The demo highlights the search functionality, random movie list display on load, and redirection to IMDb upon clicking a movie card.
