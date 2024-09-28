@@ -35,12 +35,12 @@ export default function App() {
                 <input
                     placeholder="Search for movies"
                     value="Batman"
-                    onChange={() => {}}
+                    onChange={() => { }}
                 />
-                <img 
+                <img
                     src={SearchIcon}
                     alt="search"
-                    onClick={() => {}}
+                    onClick={() => { }}
                 />
             </div>
 
@@ -51,9 +51,12 @@ export default function App() {
                     </div>
 
                     <div>
-                        <img 
-                            src={movie1.Poster}
-                            alt={movie1.Title}  
+                        <img
+                            src={movie1.Poster !== "N/A"
+                                ? movie1.Poster
+                                : "https://via.placeholder.com/400"
+                            }
+                            alt={movie1.Title}
                         />
                     </div>
                 </div>
