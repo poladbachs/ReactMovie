@@ -1,4 +1,4 @@
-export default function MovieCard() {
+export default function MovieCard({ movie1 }) {
     return (
         <div className="movie">
             <div>
