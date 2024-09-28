@@ -13,6 +13,11 @@ export default function App() {
 
     const [searchTerm, setSearchTerm] = useState('');
 
+    const movieKeywords = [
+        'Batman', 'Superman', 'Avengers', 'X-Men', 'Harry Potter', 
+        'Star Wars', 'Spider-Man', 'Iron Man', 'Matrix', 
+    ];
+
     const searchMovies = async (title) => {
         const res = await fetch(`${API_URL}&s=${title}`);
         const data = await res.json();
