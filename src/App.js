@@ -23,7 +23,7 @@ export default function App() {
         const res = await fetch(`${API_URL}&s=${title}`);
         const data = await res.json();
 
-        console.log(data.Search);
+        setMovies(data.Search);
     }
 
     useEffect(() => {
@@ -46,10 +46,15 @@ export default function App() {
                     onClick={() => { }}
                 />
             </div>
-
-            <div className="container">
-                < MovieCard movie1={movie1} />
-            </div>
+            
+            {
+                movies?.length > 0 
+                    ? (
+                        <div className="container">
+                            < MovieCard movie1={movie1} />
+                        </div>
+                    )
+            }
         </div>
     );
 }
