@@ -1,6 +1,10 @@
 export default function MovieCard({ movie }) {
+    const handleMovieClick = () => {
+        window.open(`https://imdb.com/title/${movie.imdbID}/`);
+    };
+
     return (
-        <div className="movie">
+        <div className="movie" onClick={handleMovieClick}>
             <div>
                 <p>{movie.Year}</p>
             </div>
