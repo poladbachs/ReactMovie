@@ -29,6 +29,11 @@ export default function App() {
                     value="Batman"
                     onChange={() => {}}
                 />
+                <img 
+                    src={SearchIcon}
+                    alt="search"
+                    onClick={() => {}}
+                />
             </div>
         </div>
     );
